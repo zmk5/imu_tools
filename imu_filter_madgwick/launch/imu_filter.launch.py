@@ -12,7 +12,7 @@ def generate_launch_description():
 
     return launch.LaunchDescription([
         launch_ros.actions.Node(
-            package='imu_filter_madgwick', node_executable='imu_filter_madgwick_node', node_name='imu_filter', output='screen',
+            package='imu_filter_madgwick', executable='imu_filter_madgwick_node', name='imu_filter', output='screen',
             parameters=[os.path.join(config_dir, 'imu_filter.yaml')]
         )
     ])
